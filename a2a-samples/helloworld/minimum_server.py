@@ -5,6 +5,11 @@
 #     "uvicorn",
 # ]
 # ///
+"""Example:
+curl http://0.0.0.0:9999/.well-known/agent.json | jq .
+
+curl -v http://0.0.0.0:9999/ --json '{"id": 1, "jsonrpc": "2.0", "method": "message/send", "params": {"message": {"role": "user", "parts": [{"kind": "text", "text": "Hi"}], "messageId": "abc"}}}'
+"""
 import json
 from typing import Literal
 from uuid import uuid4
