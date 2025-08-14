@@ -24,7 +24,7 @@ from a2a.types import (
 
 
 async def main() -> None:
-    PUBLIC_AGENT_CARD_PATH = '/.well-known/agent.json'
+    PUBLIC_AGENT_CARD_PATH = '/.well-known/agent-card.json'
     EXTENDED_AGENT_CARD_PATH = '/agent/authenticatedExtendedCard'
 
     # Configure logging to show INFO level messages

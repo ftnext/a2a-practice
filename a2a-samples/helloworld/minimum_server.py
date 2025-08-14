@@ -6,7 +6,7 @@
 # ]
 # ///
 """Example:
-curl http://0.0.0.0:9999/.well-known/agent.json | jq .
+curl http://0.0.0.0:9999/.well-known/agent-card.json | jq .
 
 curl -v http://0.0.0.0:9999/ --json '{"id": 1, "jsonrpc": "2.0", "method": "message/send", "params": {"message": {"role": "user", "parts": [{"kind": "text", "text": "Hi"}], "messageId": "abc"}}}'
 """
@@ -22,7 +22,7 @@ from pydantic import BaseModel
 app = FastAPI(title='Minimum Support for Hello World test client')
 
 
-@app.get('/.well-known/agent.json')
+@app.get('/.well-known/agent-card.json')
 async def public_agent_card():
     return {
         'capabilities': {'streaming': True},
